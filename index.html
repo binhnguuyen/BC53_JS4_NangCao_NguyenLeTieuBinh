@@ -1,53 +1,104 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <title>Title</title>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link rel="stylesheet" href="./css/index.css">
+<head>
+  <title>Title</title>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" href="./css/index.css">
 </head>
-  <body>
-    <!-- Bài 1 -->
-    <br><br><br><br>
-    <label for="">Nhập vào ngày tháng năm</label>
-    <input
-      type="text"
-      name="day"
-      id="day"
-      class="form-control"
-      placeholder="Nhập ngày (1-31)"
-      aria-describedby="helpId"
-    />
-    <input
-      type="text"
-      name="month"
-      id="month"
-      class="form-control"
-      placeholder="Nhập tháng (1-12)"
-      aria-describedby="helpId"
-    />
-    <input
-      type="text"
-      name="year"
-      id="year"
-      class="form-control"
-      placeholder="Nhập năm"
-      aria-describedby="helpId"
-    />
-    <button onclick="findNextAndLastDay()" id="calculation">
-      Tìm ngày tiếp theo và ngày trước đó
+
+<body>
+  <!-- Bài 1 -->
+  <br><br><br><br>
+  <label for="">Nhập vào ngày tháng năm</label>
+  <input type="text" name="day" id="day" class="form-control" placeholder="Nhập ngày (1-31)"
+    aria-describedby="helpId" />
+  <input type="text" name="month" id="month" class="form-control" placeholder="Nhập tháng (1-12)"
+    aria-describedby="helpId" />
+  <input type="text" name="year" id="year" class="form-control" placeholder="Nhập năm" aria-describedby="helpId" />
+  <button onclick="findNextAndLastDay()" id="calculation">
+    Tìm ngày tiếp theo và ngày trước đó
+  </button>
+  <div id="result1" class=""></div>
+  <div id="result2" class=""></div>
+
+  <!-- Bài 2 -->
+  <br><br><br><br>
+  <label for="">Nhập vào số tháng (1-12)</label>
+  <input type="text" name="monthToDays" id="monthToDays" class="form-control" placeholder="Nhập số tháng"
+    aria-describedby="helpId" />
+  <label for="">Nhập vào số năm</label>
+  <input type="text" name="yearToDays" id="yearToDays" class="form-control" placeholder="Nhập số năm"
+    aria-describedby="helpId" />
+  <button onclick="calcDays()" id="calculation">
+    Tính số ngày
+  </button>
+  <div id="result3" class=""></div>
+
+  <!-- Bài 3 -->
+  <br><br><br><br>
+  <label for="">Nhập vào số nguyên có 3 chữ số</label>
+  <input type="text" name="integerNumber" id="integerNumber" class="form-control"
+    placeholder="Nhập vào số nguyên có 3 chữ số" aria-describedby="helpId" />
+  <button onclick="spellNumber()" id="calculation">
+    Cách đọc là
+  </button>
+  <div id="result4" class=""></div>
+
+  <!-- Bài 4 -->
+  <br><br><br><br>
+  <!-- SV 1 -->
+  <label for="">Nhập thông tin SV thứ nhất</label>
+  <input type="text" name="studentName1" id="studentName1" class="form-control" placeholder="Nhập tên SV thứ nhất"
+    aria-describedby="helpId" />
+  <input type="text" name="coorStu1_X" id="coorStu1_X" class="form-control" placeholder="Nhập toạ độ X SV thứ nhất"
+    aria-describedby="helpId" />
+  <input type="text" name="coorStu1_Y" id="coorStu1_Y" class="form-control" placeholder="Nhập toạ độ Y SV thứ nhất"
+    aria-describedby="helpId" />
+  <!-- SV 2 -->
+  <label for="">Nhập thông tin SV thứ hai</label>
+  <input type="text" name="studentName2" id="studentName2" class="form-control" placeholder="Nhập tên SV thứ hai"
+    aria-describedby="helpId" />
+  <input type="text" name="coorStu2_X" id="coorStu2_X" class="form-control" placeholder="Nhập toạ độ X SV thứ hai"
+    aria-describedby="helpId" />
+  <input type="text" name="coorStu2_Y" id="coorStu2_Y" class="form-control" placeholder="Nhập toạ độ Y SV thứ hai"
+    aria-describedby="helpId" />
+  <!-- SV 3 -->
+  <label for="">Nhập thông tin SV thứ ba</label>
+  <input type="text" name="studentName3" id="studentName3" class="form-control" placeholder="Nhập tên SV thứ ba"
+    aria-describedby="helpId" />
+  <input type="text" name="coorStu3_X" id="coorStu3_X" class="form-control" placeholder="Nhập toạ độ X SV thứ ba"
+    aria-describedby="helpId" />
+  <input type="text" name="coorStu3_Y" id="coorStu3_Y" class="form-control" placeholder="Nhập toạ độ Y SV thứ ba"
+    aria-describedby="helpId" />
+  <!-- Toạ độ trường -->
+  <labelfor="">Nhập toạ độ trường</labelfor=>
+    <input type="text" name="coorSch_X" id="coorSch_X" class="form-control" placeholder="Nhập toạ độ X của trường"
+      aria-describedby="helpId" />
+    <input type="text" name="coorSch_Y
+  " id="coorSch_Y" class="form-control" placeholder="Nhập toạ độ Y của trường" aria-describedby="helpId" />
+    <button class="bg-success" onclick="calcMostFarStudent()" id="calculation">
+      Tính SV xa trường nhất và khoảng cách
     </button>
-    <div id="result1" class=""></div>
-    <div id="result2" class=""></div>
+    <div id="result5" class=""></div>
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+      crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+      crossorigin="anonymous"></script>
     <script src="./js/index.js"></script>
-  </body>
+</body>
+
 </html>
